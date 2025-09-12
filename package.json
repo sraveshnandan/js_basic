@@ -1,0 +1,13 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "Since everyone knows HTML & CSS, and Git/GitHub is completed, we’ll start **JavaScript from basics**.  \r Each section below includes a **simple explanation** and **how to teach it**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
