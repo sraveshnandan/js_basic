@@ -28,7 +28,7 @@ Understand how to store and manage data in your program.
 
 ## 3. Operators
 
-Learn to perform calculations, comparisons, and logical checks.
+Learn to perform calcu lations, comparisons, and logical checks.
 
 - Arithmetic (`+ - * / % **`)
 - Assignment (`=, +=, -=`)
