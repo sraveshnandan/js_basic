@@ -115,18 +115,87 @@ console.log("This is the new log!");
 // for  of , for in
 
 let arr1 = [10, 20, 30, 40];
-console.log("Length of arr1 is ", arr1.length);
+// console.log("Length of arr1 is ", arr1.length);
 
-for (let i = 0; i < arr1.length; i++) {
-  console.log("arr1[i]: ", arr1[i + 2]);
-}
+// for (let i = 0; i < arr1.length; i++) {
+//   console.log("arr1[i]: ", arr1[i + 2]);
+// }
 
-for (const element of arr1) {
-  console.log("element: ", element);
-}
+// for (const element of arr1) {
+//   console.log("element: ", element);
+// }
 
-for (const element in arr1) {
-  console.log("element: ", element);
-}
+// for (const element in arr1) {
+//   console.log("element: ", element);
+// }
 
 // Q . Write a program to print the  table of from 1 to 20 using for loop.
+
+// for (let i = 1; i <= 20; i++) {
+//   for (let a = 1; a <= 10; a++) {
+//     console.log(`${i} x ${a} = ${i * a}`);
+//   }
+//   console.log("---------");
+// }
+
+// for of loop
+
+// for (element of arr1) {
+//   console.log("Element: ", element);
+// }
+
+// for (element in arr1) {
+//   console.log("Position :", element);
+// }
+
+//functions
+
+function displayMessage() {
+  console.log("This message fom the displayMessage function.");
+
+  console.log(`${arr1}`);
+}
+
+//function params
+const newFunction = (name) => {
+  console.log(`Hello ${name}`);
+};
+
+const add = (num1, num2) => {
+  console.log(`${num1} + ${num2} = ${num1 + num2}`);
+};
+
+console.clear();
+displayMessage();
+
+newFunction("Name");
+add(12, 18);
+
+const returnFunction = (num) => {
+  let value = { num, square: num * num };
+  return value;
+};
+
+const value = returnFunction(8);
+
+console.log(`Square of ${value.num} is : ${value.square}`);
+
+const fn_01 = () => {
+  // local fn
+  const newFn = () => {
+    console.log("This is from new fn");
+  };
+
+  //global fn
+  add(12, 90);
+
+  newFn();
+};
+
+fn_01();
+
+//arrays
+
+const arr2 = [];
+
+console.log(arr2);
