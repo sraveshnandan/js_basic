@@ -150,52 +150,77 @@ let arr1 = [10, 20, 30, 40];
 
 //functions
 
-function displayMessage() {
-  console.log("This message fom the displayMessage function.");
+// function displayMessage() {
+//   console.log("This message fom the displayMessage function.");
 
-  console.log(`${arr1}`);
-}
+//   console.log(`${arr1}`);
+// }
 
-//function params
-const newFunction = (name) => {
-  console.log(`Hello ${name}`);
-};
+// //function params
+// const newFunction = (name) => {
+//   console.log(`Hello ${name}`);
+// };
 
-const add = (num1, num2) => {
-  console.log(`${num1} + ${num2} = ${num1 + num2}`);
-};
+// const add = (num1, num2) => {
+//   console.log(`${num1} + ${num2} = ${num1 + num2}`);
+// };
 
-console.clear();
-displayMessage();
+// console.clear();
+// displayMessage();
 
-newFunction("Name");
-add(12, 18);
+// newFunction("Name");
+// add(12, 18);
 
-const returnFunction = (num) => {
-  let value = { num, square: num * num };
-  return value;
-};
+// const returnFunction = (num) => {
+//   let value = { num, square: num * num };
+//   return value;
+// };
 
-const value = returnFunction(8);
+// const value = returnFunction(8);
 
-console.log(`Square of ${value.num} is : ${value.square}`);
+// console.log(`Square of ${value.num} is : ${value.square}`);
 
-const fn_01 = () => {
-  // local fn
-  const newFn = () => {
-    console.log("This is from new fn");
-  };
+// const fn_01 = () => {
+//   // local fn
+//   const newFn = () => {
+//     console.log("This is from new fn");
+//   };
 
-  //global fn
-  add(12, 90);
+//   //global fn
+//   add(12, 90);
 
-  newFn();
-};
+//   newFn();
+// };
 
-fn_01();
+// fn_01();
 
 //arrays
 
-const arr2 = [];
+console.clear();
+const arr2 = [1, 2, 3, 4, 5];
+//to get length of the array.
+const length = arr2.length;
 
+//modifying elements of an array.
+
+arr2[1] = 12;
+
+const index = arr2.findIndex((element) => element === 1);
+// console.log(arr2);
+
+// console.log(index);
+
+// Q .1 Suppose I want to change 4 of that array to 25 , and i don't know the position of 4 in that array , so how can i change it?
+
+const index_to_change = arr2.findIndex((element) => element === 4);
+arr2[index_to_change] = 25;
 console.log(arr2);
+
+// arr2 = [2, 34, 4, 56, 6, 6, 6, 8];
+// arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+// Q 1. interchange their elements of position like all even positions ? like, and positions = are , 2,4,6,8
+// Q 2. create a function which will take  this array as parameter and and element and returns elements position?
+// Q3. Now create a function which will take and element as params and change its value to another number from params in arr2.
+
+// Q4. a function which takes an element as params and checks if it is in arr1 or not .
+// Q5. create a function which will take an array as params and returns the sum of all elements of that array.
