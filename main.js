@@ -114,7 +114,7 @@ console.log("This is the new log!");
 
 // for  of , for in
 
-let arr1 = [10, 20, 30, 40];
+// let arr1 = [10, 20, 30, 40];
 // console.log("Length of arr1 is ", arr1.length);
 
 // for (let i = 0; i < arr1.length; i++) {
@@ -196,31 +196,92 @@ let arr1 = [10, 20, 30, 40];
 
 //arrays
 
-console.clear();
-const arr2 = [1, 2, 3, 4, 5];
-//to get length of the array.
-const length = arr2.length;
+// console.clear();
+// const arr2 = [1, 2, 3, 4, 5];
+// //to get length of the array.
+// const length = arr2.length;
 
-//modifying elements of an array.
+// //modifying elements of an array.
 
-arr2[1] = 12;
+// arr2[1] = 12;
 
-const index = arr2.findIndex((element) => element === 1);
+// const index = arr2.findIndex((element) => element === 1);
+// // console.log(arr2);
+
+// // console.log(index);
+
+// // Q .1 Suppose I want to change 4 of that array to 25 , and i don't know the position of 4 in that array , so how can i change it?
+
+// const index_to_change = arr2.findIndex((element) => element === 4);
+// arr2[index_to_change] = 25;
 // console.log(arr2);
 
-// console.log(index);
-
-// Q .1 Suppose I want to change 4 of that array to 25 , and i don't know the position of 4 in that array , so how can i change it?
-
-const index_to_change = arr2.findIndex((element) => element === 4);
-arr2[index_to_change] = 25;
-console.log(arr2);
-
-// arr2 = [2, 34, 4, 56, 6, 6, 6, 8];
-// arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+arr2 = [2, 34, 4, 56, 6, 6, 6, 8];
+console.clear();
 // Q 1. interchange their elements of position like all even positions ? like, and positions = are , 2,4,6,8
 // Q 2. create a function which will take  this array as parameter and and element and returns elements position?
 // Q3. Now create a function which will take and element as params and change its value to another number from params in arr2.
 
 // Q4. a function which takes an element as params and checks if it is in arr1 or not .
 // Q5. create a function which will take an array as params and returns the sum of all elements of that array.
+
+// Ans of Q1
+
+for (let i = 2; i <= arr1.length; i += 2) {
+  let cop_of_arr1 = arr1;
+  arr1[i] = arr2[i];
+  arr2[i] = cop_of_arr1[i];
+}
+
+console.log(`Arr1 : ${arr1}\nArr2 :${arr2}`);
+
+// Ans Q2.
+
+const element_position = (arr, num) => {
+  const position = arr.findIndex((element) => element === num);
+  return position;
+};
+
+console.log(`Position : ${element_position(arr1, 4)}`);
+
+//  Ans of Q3:
+
+const change_value = (num) => {
+  const index = arr2.findIndex((element) => element === num);
+  console.log(index);
+  arr2[index] = 99;
+};
+
+change_value(56);
+
+console.log("new arr2", arr2);
+
+// Ans of q4
+
+const check_element = (num) => {
+  const index = arr1.findIndex((ele) => ele === num);
+  if (index === -1) {
+    console.log(`${num} is not in arr1`);
+  } else {
+    console.log(`${num} is in arr1 at position ${index}`);
+  }
+};
+
+check_element(6);
+
+// Q5. ans
+
+console.clear();
+const sum_of_arr = (arr) => {
+  let sum = 0;
+
+  for (let i = 0; i <= arr.length; i++) {
+    sum = sum + arr[i];
+    console.log(`${sum}+${arr[i]}`);
+  }
+  console.log("Sum", sum);
+};
+
+const arr3 = [2, 2, 3, 34, 4, 4, 4, 4, 4, 4, 4, 4];
+sum_of_arr(arr3);
