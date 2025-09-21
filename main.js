@@ -228,60 +228,136 @@ console.clear();
 
 // Ans of Q1
 
-for (let i = 2; i <= arr1.length; i += 2) {
-  let cop_of_arr1 = arr1;
-  arr1[i] = arr2[i];
-  arr2[i] = cop_of_arr1[i];
-}
+// for (let i = 2; i <= arr1.length; i += 2) {
+//   let cop_of_arr1 = arr1;
+//   arr1[i] = arr2[i];
+//   arr2[i] = cop_of_arr1[i];
+// }
 
-console.log(`Arr1 : ${arr1}\nArr2 :${arr2}`);
+// console.log(`Arr1 : ${arr1}\nArr2 :${arr2}`);
 
-// Ans Q2.
+// // Ans Q2.
 
-const element_position = (arr, num) => {
-  const position = arr.findIndex((element) => element === num);
-  return position;
+// const element_position = (arr, num) => {
+//   const position = arr.findIndex((element) => element === num);
+//   return position;
+// };
+
+// console.log(`Position : ${element_position(arr1, 4)}`);
+
+// //  Ans of Q3:
+
+// const change_value = (num) => {
+//   const index = arr2.findIndex((element) => element === num);
+//   console.log(index);
+//   arr2[index] = 99;
+// };
+
+// change_value(56);
+
+// console.log("new arr2", arr2);
+
+// // Ans of q4
+
+// const check_element = (num) => {
+//   const index = arr1.findIndex((ele) => ele === num);
+//   if (index === -1) {
+//     console.log(`${num} is not in arr1`);
+//   } else {
+//     console.log(`${num} is in arr1 at position ${index}`);
+//   }
+// };
+
+// check_element(6);
+
+// // Q5. ans
+
+// console.clear();
+// const sum_of_arr = (arr) => {
+//   let sum = 0;
+
+//   for (let i = 0; i <= arr.length; i++) {
+//     sum = sum + arr[i];
+//     console.log(`${sum}+${arr[i]}`);
+//   }
+//   console.log("Sum", sum);
+// };
+
+// const arr3 = [2, 2, 3, 34, 4, 4, 4, 4, 4, 4, 4, 4];
+// sum_of_arr(arr3);
+
+//  methods of array
+
+const arr4 = [1, 2, 3, 4, 5];
+
+// syntax for push method
+
+arr4.push(29); // it just push the element at the last position of the array.
+
+arr4.pop(); // it simply remove the last element of the array.
+
+arr4.unshift(23); // it adds the element at the first position of the array.
+
+arr4.shift(); // remove the unsifted element of the array.
+
+arr4.splice(3, 1); // it takes the index as params and the delete count and simply deletes the element at that position.
+
+// arr4.forEach((element) => {
+//   console.log(`Element: ${element}`);
+// }); //returns each elements of the array.
+
+// arr4.map((el, index) => console.log(`Elements by the map method : ${el}`));
+
+const filteredArray = arr4.filter((ele) => ele != 1); // used to filter elements of the array.
+
+const is_3_exists = arr4.find((el) => el === 3);
+
+const is_some = arr4.some((el) => typeof el === "number");
+
+const is_every = arr4.every((el) => typeof el === "number");
+
+const is_true = arr4.includes(3);
+
+const is_index_of = arr4.indexOf(2);
+
+arr4.reverse(); // to reverse the array.
+
+const sortedArray = arr4.sort((a, b) => a + b); // to sort the array in ascending order.
+
+// console.log("New Array is :", arr4);
+
+// console.log("Filtered Array: ", filteredArray);
+
+// if (is_3_exists) {
+//   console.log("3 exists in the array.");
+// } else {
+//   console.log("3 not exists in the array.");
+// }
+
+// console.log("the value of some", is_some);
+// console.log("the value of every", is_every);
+
+// console.log("Is includes", is_true);
+
+// console.log("Index of 3 ", is_index_of);
+
+// console.log("Sorted Array: ", sortedArray);
+
+// object
+
+const user = {
+  name: "Sravesh Nandan",
+  email: "sraveshnandan@gmail.com",
+  age: 20,
+  is_student: true,
+  photo: {
+    url: "https://image.png",
+  },
+  tag: ["dev", "student"],
 };
 
-console.log(`Position : ${element_position(arr1, 4)}`);
+console.log(`Name : ${user.name}\nEmail: ${user.email}\n Age: ${user.age}`);
 
-//  Ans of Q3:
+const res = user.tag.find((el) => el === "student");
 
-const change_value = (num) => {
-  const index = arr2.findIndex((element) => element === num);
-  console.log(index);
-  arr2[index] = 99;
-};
-
-change_value(56);
-
-console.log("new arr2", arr2);
-
-// Ans of q4
-
-const check_element = (num) => {
-  const index = arr1.findIndex((ele) => ele === num);
-  if (index === -1) {
-    console.log(`${num} is not in arr1`);
-  } else {
-    console.log(`${num} is in arr1 at position ${index}`);
-  }
-};
-
-check_element(6);
-
-// Q5. ans
-
-console.clear();
-const sum_of_arr = (arr) => {
-  let sum = 0;
-
-  for (let i = 0; i <= arr.length; i++) {
-    sum = sum + arr[i];
-    console.log(`${sum}+${arr[i]}`);
-  }
-  console.log("Sum", sum);
-};
-
-const arr3 = [2, 2, 3, 34, 4, 4, 4, 4, 4, 4, 4, 4];
-sum_of_arr(arr3);
+console.log("res", res);
