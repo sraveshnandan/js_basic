@@ -356,8 +356,44 @@ const user = {
   tag: ["dev", "student"],
 };
 
-console.log(`Name : ${user.name}\nEmail: ${user.email}\n Age: ${user.age}`);
+// modifying object properties
+user.age = 34;
 
-const res = user.tag.find((el) => el === "student");
+user.email = "admin@email.com";
+user.tag.pop();
+user.tag.push("New Tag");
 
-console.log("res", res);
+user.tag.forEach((e) => console.log("e", e));
+
+console.clear();
+
+// object methods
+
+const keys = Object.keys(user); // returns the keys of the object
+
+const value = Object.values(user); // returns the values of the object .
+
+const entries = Object.entries(user); //returns the keys and their values as an entries
+
+const is_trued = Object.hasOwn(user, "gender"); // checks key is available in the object or not.
+
+console.clear();
+console.log(is_trued);
+
+//H/W read all the methods of objects.
+
+let a, b;
+
+a = prompt("Enter the value of a");
+b = prompt("Enter the value of b");
+
+alert(`${a} + ${b} = ${parseInt(a) + parseInt(b)}`);
+console.log("The value of a", a);
+
+// console.log(`Keys of the object: ${keys}`);
+
+// console.log(
+//   `Name : ${user.name}\nEmail: ${user.email}\nAge: ${user.age}\nTag: ${user.tag}`
+// );
+
+// const res = user.tag.find((el) => el === "student");
