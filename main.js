@@ -1,5 +1,5 @@
 console.log("This is the new log!");
-
+const ps = require("prompt-sync")();
 // variable and datatypes
 
 // var a;
@@ -382,13 +382,13 @@ console.log(is_trued);
 
 //H/W read all the methods of objects.
 
-let a, b;
+// let a, b;
 
-a = prompt("Enter the value of a");
-b = prompt("Enter the value of b");
+// a = ps("Enter the value of a");
+// b = ps("Enter the value of b");
 
-alert(`${a} + ${b} = ${parseInt(a) + parseInt(b)}`);
-console.log("The value of a", a);
+// alert(`${a} + ${b} = ${parseInt(a) + parseInt(b)}`);
+// console.log("The value of a", a);
 
 // console.log(`Keys of the object: ${keys}`);
 
@@ -397,3 +397,12 @@ console.log("The value of a", a);
 // );
 
 // const res = user.tag.find((el) => el === "student");
+let n = parseInt(ps("How many elements do you want in the array? "));
+let arr = [];
+
+for (let i = 0; i < n; i++) {
+  let value = ps(`Enter element ${i + 1}: `);
+  arr.push(value);
+}
+
+console.log("Your array is:", arr);
