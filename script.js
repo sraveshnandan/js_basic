@@ -112,3 +112,15 @@ fetch(url)
   .catch((e) => {
     alert("error occurred", e.message);
   });
+
+
+
+  const add = async() =>{
+    try{
+        const response = await fetch(url); 
+        const data = await response.json();
+        console.log("data",data);
+    }catch(e){
+        console.log("error", e.message);
+    }
+}
